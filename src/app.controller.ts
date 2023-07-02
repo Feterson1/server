@@ -10,9 +10,4 @@ export class AppController {
     return this.appService.getHello();
   };
 
-
-  @Get('profile')
-  getProfile(): string { 
-    return this.appService.getProfile();
-  };
 }
