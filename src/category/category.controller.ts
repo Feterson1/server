@@ -13,7 +13,7 @@ export class CategoryController {
   @UseGuards(JwtAuthGuard)
   @UsePipes(new ValidationPipe())
   create(@Body() createCategoryDto: CreateCategoryDto,@Req() req) {
-    console.log(req)
+    
     return this.categoryService.create(createCategoryDto,+req.user.id);
   }
 
